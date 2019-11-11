@@ -50,7 +50,6 @@
             </el-form-item>
             <el-form-item label="商品分类" prop="goods_cat">
               <el-cascader
-                expand-trigger="hover"
                 :options="catelist"
                 :props="cateProps"
                 v-model="addForm.goods_cat"
@@ -164,7 +163,8 @@ export default {
       cateProps: {
         label: 'cat_name',
         value: 'cat_id',
-        children: 'children'
+        children: 'children',
+        expandTrigger: 'hove'
       },
       // 动态参数列表数据
       manyTableData: [],
